@@ -5,7 +5,8 @@ import warnings
 
 with warnings.catch_warnings():
     warnings.simplefilter("ignore")
-    distance_sensor = DistanceSensor(echo=24, trigger=23)
+    # distance_sensor = DistanceSensor(echo=24, trigger=23)
+    distance_sensor = DistanceSensor(echo=21, trigger=20)
 
 # CONSTANTS
 max_read_distance = 10 # in cm

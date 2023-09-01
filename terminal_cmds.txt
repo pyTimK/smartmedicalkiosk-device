@@ -1,0 +1,8 @@
+###### Checking for serial port
+
+## Before Plugging in
+ls -1 /dev > dev.txt
+
+## After Plugging in
+ls -1 /dev > dev2.txt
+diff dev.txt dev2.txt

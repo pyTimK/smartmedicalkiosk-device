@@ -11,11 +11,14 @@ with warnings.catch_warnings():
     warnings.simplefilter("ignore")
     distance_sensor = DistanceSensor(echo=21, trigger=20)
 
-def read_height():
+
+def read_height_init():
     print("Waiting for button to be pressed...")
     measure_button.wait_for_press()
-    print("Getting height...")
+    return 'height init done'
 
+def read_height():
+    print("Getting height...")
     start_time = time.time()
     while time.time() - start_time < time_delay_sec:
         height = int(distance_sensor.value * 100)
